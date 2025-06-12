@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkinternal_docs_2=self.webpackChunkinternal_docs_2||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/internal-docs2/blog","blogTitle":"Blog","authorsListPath":"/internal-docs2/blog/authors"}')}}]);
