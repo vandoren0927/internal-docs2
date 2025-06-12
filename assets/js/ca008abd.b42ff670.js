@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinternal_docs_2=self.webpackChunkinternal_docs_2||[]).push([[6384],{3861:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/internal-docs2/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
