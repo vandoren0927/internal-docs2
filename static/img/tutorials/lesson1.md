@@ -1,3 +1,3 @@
 # Tutorial Lesson 1
 
-Content for lesson 1.
+This is the first tutorial lesson.
