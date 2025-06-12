@@ -1,24 +1,25 @@
+# scripts/sync-and-build.sh
 #!/usr/bin/env bash
 set -e
 
-# 读取 .env
-export $(grep -v '^#' ../.env | xargs)
+# 切到專案根目錄
+cd "$(dirname "$0")/.."
 
-# 同步 docs-src 到 docs
-rsync -av --prune-empty-dirs \
-  --include='*/' --include='*.md' --exclude='*' \
-  docs-src/ docs/
+# 載入 .env 變數
+export $(grep -v '^#' .env | xargs)
 
-# 同步多媒体到 static/img
-rsync -av --prune-empty-dirs \
-  --include='*/' --include='*.png' --include='*.jpg' \
-  --include='*.gif' --include='*.mp4' --exclude='*' \
-  docs-src/ static/img/
+# 複製所有文件到 docs/
+cp -R docs-src/. docs/
 
-# 本地 build
-yarn build
+# 複製所有文件到 static/img/
+cp -R docs-src/. static/img/
 
-# （可选）复制到本地静态服务器目录
+# 建置 Docusaurus
+npm run build
+
+# 將輸出複製到靜態伺服器目錄
 cp -R build/* "$OUTPUT_PATH"
 
-echo "✅ 本地同步 & Build 完成，输出目录：$OUTPUT_PATH"
+echo "✅ 本地同步 & Build 完成，輸出目錄：$OUTPUT_PATH"
+
+

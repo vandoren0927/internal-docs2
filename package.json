@@ -11,6 +11,7 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
+    "local-build": "bash scripts/sync-and-build.sh",
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
