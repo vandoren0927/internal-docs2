@@ -12,7 +12,7 @@ export $(grep -v '^#' .env | xargs)
 git add docs/ static/img/
 
 # 提交並附帶時間戳
-git commit -m "docs: sync update $(date '+%Y-%m-%d %H:%M')"
+npm run commit
 
 # 推送到遠端
 git push "$GIT_REMOTE" HEAD:"$GIT_BRANCH"
