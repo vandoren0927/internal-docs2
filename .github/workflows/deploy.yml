@@ -4,6 +4,9 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: write   # 允许写入 gh-pages 分支和打 tag
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
