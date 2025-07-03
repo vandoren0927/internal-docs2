@@ -1,0 +1,19 @@
+stages:
+  - build
+  - release
+
+build-site:
+  stage: build
+  tags: [local]
+  script:
+    - echo "Building site..."
+    - bash scripts/sync-and-build.sh
+
+release-version:
+  stage: release
+  tags: [local]
+  script:
+    - echo "Releasing version..."
+    - npx semantic-release --dry-run
+  only:
+    - main
